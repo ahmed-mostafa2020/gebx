@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --font-manifold-cf: "Manifold CF", sans-serif;
+  --font-inter: "inter", sans-serif;
+
+  /*--background: #ffffff;
   --foreground: #171717;
+  --mainColor: #f5c34b;
+  --secColor: #ab162c;
+  --homeBg: #f3f5f6;
+  --sidePageBg: #f0f4f7;
+  --upperBarBg: #112137;
+  --headerBg: #152945;
+  --figure: #f4f4f46e;
+  --textDark: #041e42;
+  --textLight: #626974;
+  --border: #eaeaea;
+  --linksHover: #f37521;
+  --error: #ef4444;
+  --success: #5cb85c;
+  --disabled: #d9d9d9;
+  --accordionHeader: #efeee8; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,13 +33,56 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manifold-cf);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+}
+
+button {
+  /* color: inherit !important; */
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0 !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+}
+
+@layer {
+  .centered {
+    @apply flex items-center justify-center;
   }
 }
