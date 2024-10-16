@@ -6,13 +6,13 @@ import LowerBar from "./LowerBar";
 import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
-import XIcon from "@mui/icons-material/X";
-import TwitterIcon from "@mui/icons-material/Twitter";
+// import XIcon from "@mui/icons-material/X";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import { SvgIconProps } from "@mui/material/SvgIcon";
+// import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
+// import { SvgIconProps } from "@mui/material/SvgIcon";
 
 import footerBgImage from "@assets/footer-bg.png";
 import logoSmall from "@assets/logoSmall.png";
