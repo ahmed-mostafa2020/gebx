@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@components/common/header/Header";
+import Footer from "@components/common/footer/Footer";
 
 // Load the Manifold CF font
 // const manifoldCF = localFont({
@@ -38,7 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
