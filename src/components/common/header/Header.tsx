@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "@assets/logo.png";
 
 import { Container } from "@mui/material";
+import TemporaryDrawer from "./TemporaryDrawer";
 
 const Header = () => {
   const navLinks = [
@@ -32,7 +33,11 @@ const Header = () => {
           <Image src={logo} alt="logo" />
         </Link>
 
-        <div className="flex gap-8">{renderedNavLinks}</div>
+        <div className="hidden lg:flex  gap-8">{renderedNavLinks}</div>
+
+        <div className="lg:hidden">
+          <TemporaryDrawer />
+        </div>
       </Container>
     </header>
   );
