@@ -30,7 +30,13 @@ const Header = () => {
     <header className="mx-10 mb-32 border-b border-white ">
       <Container maxWidth="lg" className="flex justify-between items-center">
         <Link href="/">
-          <Image src={logo} alt="logo" />
+          <Image
+            src={logo}
+            alt="logo"
+            height={90}
+            width={200}
+            className="object-contain"
+          />
         </Link>
 
         <div className="hidden lg:flex  gap-8">{renderedNavLinks}</div>

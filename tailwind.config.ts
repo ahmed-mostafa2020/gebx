@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         mainColor: "#F5C34B",
-        secColor: "#AB162C",
+        secColor: "#FFAC2F",
         homeBg: "#f3f5f6",
         sidePageBg: "#F0F4F7",
         upperBarBg: "#112137",
