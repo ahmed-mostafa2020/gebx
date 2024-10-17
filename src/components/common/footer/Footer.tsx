@@ -6,13 +6,10 @@ import LowerBar from "./LowerBar";
 import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
-// import XIcon from "@mui/icons-material/X";
-// import TwitterIcon from "@mui/icons-material/Twitter";
-
-// import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
-// import YouTubeIcon from "@mui/icons-material/YouTube";
-// import { SvgIconProps } from "@mui/material/SvgIcon";
+import XIcon from "@mui/icons-material/X";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import footerBgImage from "@assets/footer-bg.png";
 import logoSmall from "@assets/logoSmall.png";
@@ -120,47 +117,41 @@ const Footer = () => {
     </div>
   ));
 
-  // interface SocialMediaItem {
-  //   name: string;
-  //   link: string;
-  //   icon: React.ReactElement<SvgIconProps>;
-  // }
-  // const socialMedia: SocialMediaItem[] = [
-  //   {
-  //     name: "x",
-  //     link: "/",
-  //     icon: <TwitterIcon />,
-  //   },
-  //   {
-  //     name: "Facebook",
-  //     link: "/",
-  //     icon: <FacebookRoundedIcon />,
-  //   },
-  //   {
-  //     name: "linkedin",
-  //     link: "/",
-  //     icon: <LinkedInIcon />,
-  //   },
-  //   {
-  //     name: "youtube",
-  //     link: "/",
-  //     icon: <YouTubeIcon />,
-  //   },
-  // ];
+  const socialMedia = [
+    {
+      name: "x",
+      link: "/",
+      icon: <XIcon />,
+    },
+    {
+      name: "Facebook",
+      link: "/",
+      icon: <FacebookIcon />,
+    },
+    {
+      name: "linkedin",
+      link: "/",
+      icon: <LinkedInIcon />,
+    },
+    {
+      name: "youtube",
+      link: "/",
+      icon: <YouTubeIcon />,
+    },
+  ];
 
-  // const renderedSocialMedia = socialMedia.map((el) => (
-  //   <Link
-  //     className="text-lg font-light "
-  //     href={el.link}
-  //     title={el.name}
-  //     target="_blank"
-  //     rel="noopener noreferrer"
-  //     aria-label={`Visit our ${el.name} page`}
-  //     key={el.name}
-  //   >
-  //     {el.icon}
-  //   </Link>
-  // ));
+  const renderedSocialMedia = socialMedia.map((el) => (
+    <Link
+      href={el.link}
+      title={el.name}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visit our ${el.name} page`}
+      key={el.name}
+    >
+      {el.icon}
+    </Link>
+  ));
 
   return (
     <footer className="relative font-inter">
@@ -203,12 +194,13 @@ const Footer = () => {
             <div className="flex flex-col gap-6">{renderedMediaList}</div>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, lg: 2 }}>
+          <Grid size={{ xs: 12, sm: 6, lg: 2 }} className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
               <h6 className="uppercase text-lg font-medium">Contact Us</h6>
               {renderedContactUSList}
             </div>
-            {/* <div className="flex gap-4">{renderedSocialMedia}</div> */}
+
+            <div className="flex gap-4">{renderedSocialMedia}</div>
           </Grid>
         </Grid>
 

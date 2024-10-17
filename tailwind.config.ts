@@ -14,7 +14,7 @@ const config: Config = {
         homeBg: "#f3f5f6",
         sidePageBg: "#F0F4F7",
         upperBarBg: "#112137",
-        headerBg: "#152945",
+        headerBg: "#012F47",
         figure: "#f4f4f46e",
         textDark: "#041E42",
         textLight: "#626974",
