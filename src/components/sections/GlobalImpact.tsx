@@ -53,7 +53,7 @@ const GlobalImpact = () => {
       key={item.id}
       className="flex flex-col items-center justify-center"
     >
-      <div className="flex gap-6 mb-5 pb-4 border-b border-secColor">
+      <div className="flex gap-6 mb-5 pb-4 border-b-2 border-secColor">
         <Image src={item.image} alt={item.title} width={100} height={100} />
 
         <div className="flex flex-col justify-end items-end">
@@ -79,7 +79,7 @@ const GlobalImpact = () => {
       />
 
       <Container maxWidth="lg" className="relative pt-20 ">
-        <div className="pt-10 border-t border-secColor flex justify-center flex-col gap-6 items-center">
+        <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-6 items-center">
           <h2 className="font-bold text-2xl">
             Emirati excellence global impact
           </h2>

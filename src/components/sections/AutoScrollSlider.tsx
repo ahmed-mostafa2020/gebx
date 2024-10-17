@@ -35,9 +35,9 @@ const AutoScrollSlider: React.FC<AutoScrollSliderProps> = ({ logos = [] }) => {
   }
 
   return (
-    <section className="bg-[#F5F5F5] pt-10 pb-32 flex flex-col gap-10 border-b-4 border-secColor">
+    <section className="bg-[#F5F5F5] pb-32 flex flex-col gap-10 border-b-4 border-secColor">
       <Container maxWidth="lg" className="relative pt-20 ">
-        <h2 className="pt-10 border-t border-secColor w-full text-center font-bold text-2xl text-[#065750]">
+        <h2 className="pt-6 border-t-2 border-secColor w-full text-center font-bold text-2xl text-[#065750]">
           Our partners of impact
         </h2>
       </Container>

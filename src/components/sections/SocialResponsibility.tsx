@@ -16,7 +16,7 @@ const SocialResponsibility = () => {
       />
 
       <Container maxWidth="lg" className="relative pt-20">
-        <div className="pt-10 border-t border-secColor flex justify-center flex-col gap-16 items-center">
+        <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-16 items-center">
           <h2 className="font-bold text-2xl">Our social responsibility</h2>
 
           <article className="text-center leading-8 text-pretty font-light font-inter">
