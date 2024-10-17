@@ -15,11 +15,7 @@ const SectionTemplate = ({
   children,
 }: sectionData) => {
   return (
-    <section
-      className={`relative text-center pb-10 ${
-        backgroundColor && `bg-[${backgroundColor}]`
-      }`}
-    >
+    <section className={`relative text-center pb-10 ${backgroundColor}`}>
       <Image
         src={image}
         alt="backgroundImage"
@@ -27,7 +23,7 @@ const SectionTemplate = ({
       />
 
       <Container maxWidth="lg" className="relative pt-20">
-        <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-6 items-center">
+        <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-10 items-center">
           <h2 className="font-bold text-2xl">{title}</h2>
 
           <div className="flex flex-col items-center">{children}</div>

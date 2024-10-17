@@ -71,7 +71,11 @@ const GlobalImpact = () => {
   ));
 
   return (
-    <SectionTemplate image={globalBg} title="Emirati excellence global impact">
+    <SectionTemplate
+      image={globalBg}
+      title="Emirati excellence global impact"
+      backgroundColor="bg-[#347376]"
+    >
       <Grid container rowSpacing={10} columnSpacing={15}>
         {renderedList}
       </Grid>

@@ -8,11 +8,11 @@ import group from "@assets/G.png";
 import { Container } from "@mui/material";
 const SocialResponsibility = () => {
   return (
-    <section className="relative pb-28">
+    <section className="relative pb-28 bg-[#023047]">
       <Image
         src={responsibilityBg}
         alt="footerBackground"
-        className="h-[790px] object-bottom absolute w-full object-cover"
+        className="h-[1015px] md:h-[820px] lg:h-[790px] object-bottom absolute w-full object-cover"
       />
 
       <Container maxWidth="lg" className="relative pt-20">
@@ -52,7 +52,7 @@ const SocialResponsibility = () => {
 
             <Link
               href="/"
-              className="border text-center py-2 border-white rounded-md hover:border-secColor transition-all duration-300 ease-in-out"
+              className="border text-center py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
             >
               Discover More
             </Link>
