@@ -75,12 +75,12 @@ const GlobalImpact = () => {
       <Image
         src={globalBg}
         alt="footerBackground"
-        className="h-full absolute w-full object-cover"
+        className="absolute w-full h-[-webkit-fill-available] object-fill"
       />
 
       <Container maxWidth="lg" className="relative pt-20 ">
         <div className="pt-10 border-t border-secColor flex justify-center flex-col gap-6 items-center">
-          <h2 className="font-bold text-xl">
+          <h2 className="font-bold text-2xl">
             Emirati excellence global impact
           </h2>
 
