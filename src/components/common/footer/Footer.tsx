@@ -158,7 +158,7 @@ const Footer = () => {
       <Image
         src={footerBgImage}
         alt="footerBackground"
-        className="object-fill absolute w-full"
+        className="object-fill absolute w-full h-full"
       />
 
       <Container maxWidth="lg" className="relative pt-20">

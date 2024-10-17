@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import responsibilityBg from "@assets/pexels-nextvoyage-1470502 1.png";
+import responsibilityBg from "@assets/ourSocialResponsibility.png";
 import logoSmall from "@assets/logoSmall.png";
 import group from "@assets/G.png";
 
@@ -12,7 +12,7 @@ const SocialResponsibility = () => {
       <Image
         src={responsibilityBg}
         alt="footerBackground"
-        className="h-[900px] object-bottom absolute w-full object-cover"
+        className="h-[780px] object-bottom absolute w-full object-cover"
       />
 
       <Container maxWidth="lg" className="relative pt-20">
