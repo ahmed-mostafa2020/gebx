@@ -12,17 +12,28 @@ type ChildrenProps = {
 };
 
 const SwiperSlider = ({ children }: ChildrenProps) => {
-  const [direction, setDirection] = useState<"horizontal" | "vertical">(
-    "horizontal"
-  );
+  const [swiperParams, setSwiperParams] = useState({
+    slidesPerView: 3,
+    spaceBetween: 30,
+  });
 
   useEffect(() => {
     const handleResize = () => {
-      setDirection(window.innerWidth <= 760 ? "vertical" : "horizontal");
+      if (window.innerWidth <= 760) {
+        setSwiperParams({
+          slidesPerView: 1,
+          spaceBetween: 10,
+        });
+      } else {
+        setSwiperParams({
+          slidesPerView: 2,
+          spaceBetween: 30,
+        });
+      }
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial direction
+    handleResize(); // Set initial params
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -30,14 +41,15 @@ const SwiperSlider = ({ children }: ChildrenProps) => {
   return (
     <Container maxWidth="lg">
       <Swiper
-        slidesPerView={2}
-        direction={direction}
+        {...swiperParams}
+        // direction={direction}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         modules={[Navigation]}
-        className="w-full h-full"
+        // className="w-full h-full md:h-96"
+        className="mySwiper"
       >
         {children}
 
