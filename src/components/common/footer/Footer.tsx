@@ -167,7 +167,7 @@ const Footer = () => {
             size={{ xs: 12, sm: 6, lg: 4.5 }}
             className="flex gap-10 flex-col"
           >
-            <Link href="/" className="w-fit">
+            <Link href="/" className="w-fit select-none">
               <Image src={logoSmall} alt="logo" />
             </Link>
 

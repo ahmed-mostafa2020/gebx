@@ -12,7 +12,7 @@ const SocialResponsibility = () => {
       <Image
         src={responsibilityBg}
         alt="footerBackground"
-        className="h-[780px] object-bottom absolute w-full object-cover"
+        className="h-[790px] object-bottom absolute w-full object-cover"
       />
 
       <Container maxWidth="lg" className="relative pt-20">
@@ -34,7 +34,7 @@ const SocialResponsibility = () => {
           <div className="flex flex-col gap-8 mt-10">
             <div className="flex">
               <div className=" flex justify-end items-end flex-col gap-2 pe-8 me-8 border-e border-white">
-                <Link href="/">
+                <Link href="/" className="w-fit select-none">
                   <Image
                     src={logoSmall}
                     alt="logo"

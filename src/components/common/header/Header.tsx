@@ -57,7 +57,7 @@ const Header = () => {
         }`}
     >
       <Container maxWidth="lg" className="flex justify-between items-center">
-        <Link href="/">
+        <Link href="/" className="w-fit select-none">
           <Image
             src={logo}
             alt="logo"

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import { Container } from "@mui/material";
+import SectionTemplate from "../common/reusable/SectionTemplate";
 import Grid from "@mui/material/Grid2";
 
 import globalBg from "@assets/globalBg.png";
@@ -9,7 +10,6 @@ import reach from "@assets/world-map 1.png";
 import expertise from "@assets/expertise 1.png";
 import service from "@assets/solution 1.png";
 import logo from "@assets/logoMed.png";
-import Link from "next/link";
 
 const GlobalImpact = () => {
   const list = [
@@ -71,35 +71,21 @@ const GlobalImpact = () => {
   ));
 
   return (
-    <section className="py-10 relative">
-      <Image
-        src={globalBg}
-        alt="footerBackground"
-        className="absolute w-full h-[-webkit-fill-available] object-fill"
-      />
+    <SectionTemplate image={globalBg} title="Emirati excellence global impact">
+      <Grid container rowSpacing={10} columnSpacing={15}>
+        {renderedList}
+      </Grid>
 
-      <Container maxWidth="lg" className="relative pt-20 ">
-        <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-6 items-center">
-          <h2 className="font-bold text-2xl">
-            Emirati excellence global impact
-          </h2>
-
-          <Grid container rowSpacing={10} columnSpacing={15}>
-            {renderedList}
-          </Grid>
-
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="logo"
-              height={100}
-              width={250}
-              className="object-contain"
-            />
-          </Link>
-        </div>
-      </Container>
-    </section>
+      <Link href="/" className="w-fit select-none">
+        <Image
+          src={logo}
+          alt="logo"
+          height={100}
+          width={250}
+          className="object-contain"
+        />
+      </Link>
+    </SectionTemplate>
   );
 };
 
