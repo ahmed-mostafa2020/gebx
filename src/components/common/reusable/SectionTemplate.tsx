@@ -5,7 +5,7 @@ type SectionData = {
   image: StaticImageData;
   backgroundColor?: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const SectionTemplate = ({
