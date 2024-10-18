@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -53,7 +53,9 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
 
       <Container maxWidth="lg" className="relative pt-20">
         <div className="pt-10 pb-20 border-t-2 border-secColor flex justify-center flex-col gap-10 items-center">
-          <h2 className="font-bold text-2xl">{title}</h2>
+          <Link href={link} className="font-bold text-2xl">
+            {title}
+          </Link>
         </div>
       </Container>
       <div className="flex">{renderedSubCategories}</div>
