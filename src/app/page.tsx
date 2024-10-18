@@ -1,5 +1,6 @@
 // import Image from "next/image";
 
+import HeroSection from "@components/sections/HeroSection";
 import GlobalImpact from "@components/sections/GlobalImpact";
 import SocialResponsibility from "@components/sections/SocialResponsibility";
 import News from "@components/sections/News";
@@ -28,6 +29,8 @@ export default function Home() {
 
   return (
     <>
+      <HeroSection />
+
       <GlobalImpact />
 
       <SocialResponsibility />

@@ -49,12 +49,8 @@ const Header = () => {
 
   return (
     <header
-      className={`border-b border-white z-10 mx-10 transition-all duration-300 ease-in-out 
-        ${
-          isScrolled
-            ? "bg-headerBg fixed top-0 left-0 right-0 "
-            : "bg-transparent "
-        }`}
+      className={`bg-[#00000035] border-b border-white z-10 mx-10 transition-all duration-300 ease-in-out 
+        ${isScrolled ? "fixed top-0 left-0 right-0 " : ""}`}
     >
       <Container maxWidth="lg" className="flex justify-between items-center">
         <Link href="/" className="w-fit select-none">
