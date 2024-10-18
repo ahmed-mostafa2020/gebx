@@ -25,31 +25,31 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
   const renderedSubCategories = subCategories.map((subCategory, index) => (
     <div
       key={subCategory.id}
-      className={`h-[700px] bg-transparent border-secColor flex items-end justify-end ${
-        index !== 0 && "border-s-2"
-      }`}
+      className={`h-[700px] bg-transparent  border-secColor flex items-end justify-end 
+        ${index !== 0 && "border-s-2"}`}
     >
-      <Accordion className="accordion-upward centered flex-col bg-[#00000070] py-10">
+      <Accordion className="px-10 accordion-upward centered flex-col bg-[#000000b0] py-14">
         <AccordionSummary
           aria-controls="panel1-content"
           id="panel1-header"
-          className="text-secColor font-semibold uppercase"
+          className="text-secColor text-lg font-semibold uppercase w-full"
         >
           {subCategory.title}
         </AccordionSummary>
-        <AccordionDetails className="text-white leading-6 text-sm border-b-4 border-secColor mx-10 pt-6 h-[330px] mb-12 font-extralight text-pretty">
+        <AccordionDetails className="text-white leading-6 text-sm border-b-4 border-secColor pt-6 h-[330px] mb-12 font-extralight text-pretty">
           {subCategory.description}
         </AccordionDetails>
       </Accordion>
     </div>
   ));
   return (
-    <section className="relative text-center">
+    <section className="relative text-center bg-[#BD9C6B40]">
       <Image
         src={image}
         alt="backgroundImage"
-        className="absolute w-full h-[-webkit-fill-available] object-cover"
+        className="absolute w-full h-[-webkit-fill-available] object-cover opacity-65"
       />
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <Container maxWidth="lg" className="relative pt-20">
         <div className="pt-10 pb-20 border-t-2 border-secColor flex justify-center flex-col gap-10 items-center">
