@@ -25,10 +25,10 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
   const renderedSubCategories = subCategories.map((subCategory, index) => (
     <div
       key={subCategory.id}
-      className={`h-[700px] bg-transparent  border-secColor flex items-end justify-end 
+      className={`h-[700px] bg-transparent border-secColor flex items-end justify-end 
         ${index !== 0 && "border-s-2"}`}
     >
-      <Accordion className="px-10 accordion-upward centered flex-col bg-[#000000b0] py-14">
+      <Accordion className="px-10 accordion-upward centered flex-col bg-[#0000007a] py-14">
         <AccordionSummary
           aria-controls="panel1-content"
           id="panel1-header"

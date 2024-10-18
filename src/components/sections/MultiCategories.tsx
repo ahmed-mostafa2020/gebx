@@ -95,7 +95,7 @@ const MultiCategories = () => {
   ];
 
   return (
-    <section className="">
+    <section className="multiCategories">
       <CategoriesList categoriesList={categoriesList} />
     </section>
   );
