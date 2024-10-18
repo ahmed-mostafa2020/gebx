@@ -3,6 +3,7 @@
 import GlobalImpact from "@components/sections/GlobalImpact";
 import SocialResponsibility from "@components/sections/SocialResponsibility";
 import News from "@components/sections/News";
+import MultiCategories from "@components/sections/MultiCategories";
 import AutoScrollSlider from "@components/sections/AutoScrollSlider";
 
 import { StaticImageData } from "next/image";
@@ -32,6 +33,8 @@ export default function Home() {
       <SocialResponsibility />
 
       <News />
+
+      <MultiCategories />
 
       <AutoScrollSlider logos={logos} />
     </>

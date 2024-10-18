@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 
-type sectionData = {
+type SectionData = {
   image: StaticImageData;
   backgroundColor?: string;
   title: string;
@@ -13,7 +13,7 @@ const SectionTemplate = ({
   backgroundColor,
   title,
   children,
-}: sectionData) => {
+}: SectionData) => {
   return (
     <section className={`relative text-center pb-10 ${backgroundColor}`}>
       <Image
