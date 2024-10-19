@@ -52,7 +52,7 @@ const SocialResponsibility = () => {
 
             <Link
               href="/"
-              className="border text-center py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+              className="border text-center capitalize  py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
             >
               Discover More
             </Link>
