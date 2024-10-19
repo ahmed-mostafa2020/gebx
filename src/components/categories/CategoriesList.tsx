@@ -39,6 +39,7 @@ const CategoriesList = ({ categoriesList }: CategoriesListProps) => {
       />
     </SwiperSlide>
   ));
+
   return (
     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       {renderedCategories}
