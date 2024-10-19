@@ -1,0 +1,116 @@
+{
+  "heroSection": [
+    {
+      "id": 1,
+      "image": "heroImage",
+      "title": "ONE SUSTAINABILITY",
+      "description": "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
+      "link": "/"
+    },
+    {
+      "id": 2,
+      "image": "heroImage",
+      "title": "ONE SUSTAINABILITY",
+      "description": "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
+      "link": "/"
+    }
+  ],
+  "globalImpactSection": [
+    {
+      "id": 1,
+      "image": "company",
+      "title": "100%",
+      "subTitle": "Emirati Company",
+      "description": "Pioneering Green Industry 4.0 revolution with Eco-AIoT solutions from the UAE to the world."
+    },
+    {
+      "id": 2,
+      "image": "reach",
+      "title": "Global",
+      "subTitle": "Reach",
+      "description": "Headquarter: Abu-Dhabi Excellence Center: Ras-Al-Khaimah African Hub:  Cairo- Egypt"
+    }
+  ],
+  "newsSection": [
+    {
+      "id": 1,
+      "image": "news1",
+      "date": "28th April 2024",
+      "description": "How Mustadeem AI will streamline your sustainability strategy in 2025. Phasellus quis lorem sed turpis mollis iaculis sit amet id ex. Fusce condimentum fermentum lacus, et vestibulum ante lobortis id.",
+      "link": "/"
+    },
+    {
+      "id": 2,
+      "image": "news2",
+      "date": "28th April 2024",
+      "description": "How Mustadeem AI will streamline your sustainability strategy in 2025. Phasellus quis lorem sed turpis mollis iaculis sit amet id ex. Fusce condimentum fermentum lacus, et vestibulum ante lobortis id.",
+      "link": "/"
+    }
+  ],
+  "categoriesSection": [
+    {
+      "id": 1,
+      "image": "categoryImage1",
+      "title": "Category 1",
+      "link": "/",
+      "subCategories": [
+        {
+          "id": 1,
+          "link": "/",
+          "title": "Lorem Ipsum is simply",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 2,
+          "link": "/",
+          "title": "Lorem Ipsum is simply2",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 3,
+          "link": "/",
+          "title": "Lorem Ipsum is simply3",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 4,
+          "link": "/",
+          "title": "Lorem Ipsum is simply4",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "categoryImage1",
+      "title": "Category 2",
+      "link": "/",
+      "subCategories": [
+        {
+          "id": 1,
+          "link": "/",
+          "title": "Lorem Ipsum is simply",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 2,
+          "link": "/",
+          "title": "Lorem Ipsum is simply2",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 3,
+          "link": "/",
+          "title": "Lorem Ipsum is simply3",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        },
+        {
+          "id": 4,
+          "link": "/",
+          "title": "Lorem Ipsum is simply4",
+          "description": "GebX Signs First Long-Term LNG Heads of Agreement from Ruwais Low-Carbon LNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin euismod porta. Sed vel laoreet nibh. Aenean a sem ut est tristique efficitur et sed ante. Sed nec est feugiat, tempus dui vitae, hendrerit lectus."
+        }
+      ]
+    }
+  ]
+}

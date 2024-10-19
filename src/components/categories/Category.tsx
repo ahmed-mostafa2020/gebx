@@ -43,7 +43,7 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
     </div>
   ));
   return (
-    <section className="relative text-center bg-[#BD9C6B40]">
+    <div className="relative text-center bg-[#BD9C6B40]">
       <Image
         src={image}
         alt="backgroundImage"
@@ -59,7 +59,7 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
         </div>
       </Container>
       <div className="flex">{renderedSubCategories}</div>
-    </section>
+    </div>
   );
 };
 

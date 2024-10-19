@@ -32,10 +32,26 @@ const HeroSection = () => {
         "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
       link: "/",
     },
+    {
+      id: 3,
+      image: heroImage,
+      title: "ONE SUSTAINABILITY",
+      description:
+        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
+      link: "/",
+    },
+    {
+      id: 4,
+      image: heroImage,
+      title: "ONE SUSTAINABILITY",
+      description:
+        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
+      link: "/",
+    },
   ];
 
   return (
-    <section className="hero-section mt-[-86px] h-[848px]">
+    <section className="hero-section mt-[-86px] h-[800px]">
       <HerosList herosList={herosList} />
     </section>
   );

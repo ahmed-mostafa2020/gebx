@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-headerBg text-white `}>
+      <body className={`text-white`}>
         <Header />
         {children}
         <Footer />

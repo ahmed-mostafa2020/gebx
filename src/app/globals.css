@@ -112,14 +112,19 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 10;
 }
 .hero-section .swiper-pagination {
-  width: fit-content !important;
-  height: fit-content !important;
   left: 87% !important;
   top: 89% !important;
+  width: 92px !important;
+  height: fit-content !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 .hero-section .swiper-pagination-bullet {
-  width: 16px !important;
-  height: 16px !important;
+  width: 15px !important;
+  height: 15px !important;
   background-color: transparent !important;
   border: 1px solid white !important;
 }

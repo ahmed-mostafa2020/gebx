@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -49,8 +49,8 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-[#00000035] z-20 transition-all duration-300 ease-in-out 
-        ${isScrolled ? "fixed top-0 left-0 right-0 " : ""}`}
+      className={`bg-[#00000075] z-20 transition-all duration-300 ease-in-out 
+        ${isScrolled ? "fixed top-0 left-0 right-0 " : "relative"}`}
     >
       <Container maxWidth="lg" className="flex justify-between items-center">
         <Link href="/" className="w-fit select-none">
