@@ -51,7 +51,9 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
           id={`panel${index}-header`}
           className="text-secColor text-lg font-semibold uppercase w-full"
         >
-          <Link href={subCategory.link}>{subCategory.title}</Link>
+          <Link href={subCategory.link} className="text-secColor">
+            {subCategory.title}
+          </Link>
         </AccordionSummary>
         <AccordionDetails className="text-white leading-6 text-sm border-b-4 border-secColor pt-6 h-[330px] mb-12 font-extralight text-pretty">
           {subCategory.description}

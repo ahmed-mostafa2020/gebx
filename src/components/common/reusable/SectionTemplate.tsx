@@ -26,7 +26,7 @@ const SectionTemplate = ({
 
       <Container maxWidth="lg" className="relative pt-20">
         <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-10 items-center">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-[28px]">
             {title} {span && <span className="text-secColor">{span}</span>}{" "}
           </h2>
 
