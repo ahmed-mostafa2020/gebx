@@ -30,7 +30,7 @@ const SectionTemplate = ({
             {title} {span && <span className="text-secColor">{span}</span>}{" "}
           </h2>
 
-          <div className="flex flex-col items-center">{children}</div>
+          <div className="flex flex-col items-center w-full">{children}</div>
         </div>
       </Container>
     </section>
