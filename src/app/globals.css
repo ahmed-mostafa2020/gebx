@@ -88,6 +88,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* Custom Swipers Arrows & bullets styles */
+
 .swiper-button-next {
   right: 0 !important;
 }

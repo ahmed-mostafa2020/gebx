@@ -3,7 +3,7 @@
 import HeroSection from "@components/sections/HeroSection";
 import GlobalImpact from "@components/sections/GlobalImpact";
 import SocialResponsibility from "@components/sections/SocialResponsibility";
-import News from "@components/sections/News";
+// import News from "@components/sections/News";
 import CategoriesSection from "@components/sections/CategoriesSection";
 import PartnersSection from "@components/sections/PartnersSection";
 
@@ -38,7 +38,7 @@ export default function Home() {
 
       <SocialResponsibility />
 
-      <News />
+      {/* <News /> */}
 
       <CategoriesSection />
 
