@@ -44,7 +44,7 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
     >
       <Accordion
         expanded={expandedIndex === index}
-        className="px-10 accordion-upward centered flex-col bg-[#0000007a] py-14"
+        className="px-10 accordion-upward centered flex-col py-14"
       >
         <AccordionSummary
           aria-controls={`panel${index}-content`}

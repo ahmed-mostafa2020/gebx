@@ -4,9 +4,9 @@ import { Swiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Container } from "@mui/material";
+import "swiper/swiper-bundle.css";
 
-import "swiper/swiper-bundle.css"; // Import Swiper styles
+import { Container } from "@mui/material";
 
 type ChildrenProps = {
   children: React.ReactNode;
@@ -40,7 +40,7 @@ const SwiperSlider = ({ children }: ChildrenProps) => {
           prevEl: ".swiper-button-prev",
         }}
         modules={[Navigation]}
-        className="mySwiper"
+        className="mySwiper "
       >
         {children}
 
