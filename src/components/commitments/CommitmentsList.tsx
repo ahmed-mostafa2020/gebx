@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Link from "next/link";
 
 type CommitmentItem = {
   id?: number;
@@ -61,8 +62,8 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
   });
 
   return (
-    <div className="flex flex-col items-center gap-10 relative z-[2] w-full">
-      <h2 className="text-sm text-[#f5f5f5] h-[150px]">
+    <div className="flex flex-col items-center gap-16 relative z-[2] w-full">
+      <h2 className="text-sm text-[#f5f5f5] h-[100px]">
         {commitmentsList[activeIndex].description}
       </h2>
 
@@ -78,7 +79,12 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
         </button>
       </div>
 
-      <div className="mt-4"></div>
+      <Link
+        href={commitmentsList[activeIndex].link}
+        className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+      >
+        Discover More
+      </Link>
     </div>
   );
 };

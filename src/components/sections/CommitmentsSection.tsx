@@ -21,21 +21,21 @@ const CommitmentsSection = () => {
       image: commitment2,
       description:
         "Imagine a world where every business decision leads to a greener planet, where technology and sustainability work hand in hand to shape a future where resources are preserved, communities thrive, and industries innovate responsibly. At GebX, we believe in this world. Our mission is to drive this transformation by building and integrating digital solutions that not only meet the needs of today but also pave the way for a sustainable tomorrow. Through our specialised AIoT technologies and eco-friendly innovations, we’re building the foundation for a world where economic growth and environmental responsibility are one and the same.",
-      link: "/",
+      link: "/1",
     },
     {
       id: 2,
       image: commitment1,
       description:
         "Imagine a world where every business decision leads to a greener planet, where technology and sustainability work hand in hand to shape a future where resources are preserved, communities thrive, and industries innovate responsibly",
-      link: "/",
+      link: "/2",
     },
     {
       id: 3,
       image: commitment2,
       description:
         "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
-      link: "/",
+      link: "/3",
     },
   ];
 
