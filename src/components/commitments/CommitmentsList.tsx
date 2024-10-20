@@ -44,7 +44,7 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
         key={commitment.id}
         className={`transition-transform duration-500 ease-in-out mx-[-20px] ${
           isActive
-            ? "scale-125 z-10"
+            ? "scale-125 z-3"
             : isBefore || isAfter
             ? "scale-90"
             : "scale-75"
@@ -68,13 +68,13 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
       </h2>
 
       <div className="flex justify-evenly items-center w-full">
-        <button onClick={handlePrev} className="">
+        <button onClick={handlePrev} className="relative z-[4]">
           <ArrowBackIosIcon fontSize="large" />
         </button>
 
         <div className="centered">{imagesList} </div>
 
-        <button onClick={handleNext} className="">
+        <button onClick={handleNext} className="relative z-[4]">
           <ArrowForwardIosIcon fontSize="large" />
         </button>
       </div>
