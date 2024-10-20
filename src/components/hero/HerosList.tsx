@@ -43,6 +43,7 @@ const HerosList = ({ herosList }: HerosListProps) => {
       pagination={{
         clickable: true,
       }}
+      loop={true}
       mousewheel={true}
       keyboard={true}
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
