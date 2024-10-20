@@ -4,8 +4,8 @@ import HeroSection from "@components/sections/HeroSection";
 import GlobalImpact from "@components/sections/GlobalImpact";
 import SocialResponsibility from "@components/sections/SocialResponsibility";
 import News from "@components/sections/News";
-import MultiCategories from "@components/sections/MultiCategories";
-import AutoScrollSlider from "@components/sections/AutoScrollSlider";
+import CategoriesSection from "@components/sections/CategoriesSection";
+import PartnersSection from "@components/sections/PartnersSection";
 
 import { StaticImageData } from "next/image";
 import image1 from "@assets/Rectangle 601.png";
@@ -15,6 +15,7 @@ import image4 from "@assets/Rectangle 604.png";
 import image5 from "@assets/Rectangle 605.png";
 import image6 from "@assets/Rectangle 606.png";
 import image7 from "@assets/Rectangle 607.png";
+import CommitmentsSection from "../components/sections/CommitmentsSection";
 
 export default function Home() {
   const logos: StaticImageData[] = [
@@ -31,15 +32,17 @@ export default function Home() {
     <>
       <HeroSection />
 
+      <CommitmentsSection />
+
       <GlobalImpact />
 
       <SocialResponsibility />
 
       <News />
 
-      <MultiCategories />
+      <CategoriesSection />
 
-      <AutoScrollSlider logos={logos} />
+      <PartnersSection logos={logos} />
     </>
   );
 }

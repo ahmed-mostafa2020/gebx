@@ -8,6 +8,7 @@ import Footer from "@components/common/footer/Footer";
 // const manifoldCF = localFont({
 //   src: "./fonts/ManifoldCF.woff2", // Adjust the path and format as necessary
 //   variable: "--font-manifold-cf",
+//   display: 'swap',
 //   weight: "100 900", // Adjust based on the weights you need
 // });
 

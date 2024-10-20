@@ -5,6 +5,7 @@ type SectionData = {
   image: StaticImageData;
   backgroundColor?: string;
   title: string;
+  span?: string;
   children?: React.ReactNode;
 };
 
@@ -12,6 +13,7 @@ const SectionTemplate = ({
   image,
   backgroundColor,
   title,
+  span,
   children,
 }: SectionData) => {
   return (
@@ -24,7 +26,9 @@ const SectionTemplate = ({
 
       <Container maxWidth="lg" className="relative pt-20">
         <div className="pt-10 border-t-2 border-secColor flex justify-center flex-col gap-10 items-center">
-          <h2 className="font-bold text-2xl">{title}</h2>
+          <h2 className="font-bold text-2xl">
+            {title} {span && <span className="text-secColor">{span}</span>}{" "}
+          </h2>
 
           <div className="flex flex-col items-center">{children}</div>
         </div>

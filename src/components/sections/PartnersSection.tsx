@@ -7,7 +7,7 @@ interface AutoScrollSliderProps {
   logos: StaticImageData[];
 }
 
-const AutoScrollSlider: React.FC<AutoScrollSliderProps> = ({ logos = [] }) => {
+const PartnersSection: React.FC<AutoScrollSliderProps> = ({ logos = [] }) => {
   const [position, setPosition] = useState<number>(0);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const AutoScrollSlider: React.FC<AutoScrollSliderProps> = ({ logos = [] }) => {
   );
 };
 
-export default AutoScrollSlider;
+export default PartnersSection;

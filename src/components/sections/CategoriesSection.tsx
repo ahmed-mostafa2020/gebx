@@ -18,7 +18,7 @@ type CategoriesItem = {
   subCategories: SubCategory[];
 };
 
-const MultiCategories = () => {
+const CategoriesSection = () => {
   const categoriesList: CategoriesItem[] = [
     {
       id: 1,
@@ -101,4 +101,4 @@ const MultiCategories = () => {
   );
 };
 
-export default MultiCategories;
+export default CategoriesSection;
