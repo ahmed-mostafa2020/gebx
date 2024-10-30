@@ -41,7 +41,7 @@ const PartnersSection = ({ partnersData }: PartnerProps) => {
     ],
   };
 
-  const duplicateImages = [...partnersData, ...partnersData, ...partnersData];
+  // const duplicateImages = [...partnersData, ...partnersData, ...partnersData];
 
   return (
     <section className="bg-[#F5F5F5] pb-32 overflow-hidden flex flex-col gap-10 border-b-4 border-secColor">
@@ -53,7 +53,7 @@ const PartnersSection = ({ partnersData }: PartnerProps) => {
 
       <div className="partner-slider">
         <Slider {...settings}>
-          {duplicateImages?.map((partner) => (
+          {partnersData?.map((partner) => (
             <Link
               href={`/${partner?.slug}`}
               className="border-none text-black"
