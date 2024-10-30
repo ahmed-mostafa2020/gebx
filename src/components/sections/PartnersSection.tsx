@@ -1,17 +1,23 @@
 "use client";
 import { Container } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-interface AutoScrollSliderProps {
-  logos: StaticImageData[];
+import Link from "next/link";
+
+type PartnerItem = {
+  id: number;
+  image: string;
+  title: string;
+  slug: string;
+};
+interface PartnerProps {
+  partnersData: PartnerItem[];
 }
 
-const PartnersSection = ({ logos }: AutoScrollSliderProps) => {
-  const extendedLogos = [...logos, ...logos];
-
+const PartnersSection = ({ partnersData }: PartnerProps) => {
   const settings = {
     autoplay: true,
     autoplaySpeed: 0, // Set to 0 for continuous scrolling
@@ -35,9 +41,7 @@ const PartnersSection = ({ logos }: AutoScrollSliderProps) => {
     ],
   };
 
-  if (logos.length === 0) {
-    return <div>No logos to display</div>;
-  }
+  const duplicateImages = [...partnersData, ...partnersData, ...partnersData];
 
   return (
     <section className="bg-[#F5F5F5] pb-32 overflow-hidden flex flex-col gap-10 border-b-4 border-secColor">
@@ -49,17 +53,20 @@ const PartnersSection = ({ logos }: AutoScrollSliderProps) => {
 
       <div className="partner-slider">
         <Slider {...settings}>
-          {extendedLogos.map((logo, index) => (
-            <div className="border-none " key={index}>
+          {duplicateImages?.map((partner) => (
+            <Link
+              href={`/${partner?.slug}`}
+              className="border-none text-black"
+              key={partner?.id}
+            >
               <Image
-                key={index}
-                src={logo}
-                alt={`Partner logo ${index + 1}`}
+                src={partner?.image}
+                alt={partner?.title}
                 width={170}
                 height={128}
                 className="inline-block w-44 h-32 grayscale"
               />
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>

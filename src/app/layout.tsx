@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
+
+import QueryProvider from "@components/libraries/QueryProvider";
 import Header from "@components/common/header/Header";
 import Footer from "@components/common/footer/Footer";
 
@@ -42,9 +44,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`text-white`}>
-        <Header />
-        {children}
-        <Footer />
+        <QueryProvider>
+          <Header />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );

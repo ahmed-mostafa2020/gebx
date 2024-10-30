@@ -23,11 +23,11 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@store/*": ["src/store/*"],
       "@types": ["src/types/index"],
-      "@layouts/*": ["src/layouts/*"],
       "@utils/*": ["src/utils/*"],
-      "@services/*": ["src/services/*"],
+      "@constants/*": ["src/constants/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@store/*": ["src/store/*"],
       "@validations/*": ["src/validations/*"]
     }
   },
