@@ -53,6 +53,9 @@ export default function Home() {
 
   return (
     <>
+      {(isLoading || isFetching) && "loading..."}
+      {error && <p>error</p>}
+
       <HeroSection />
 
       <CommitmentsSection />
