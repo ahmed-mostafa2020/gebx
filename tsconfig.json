@@ -27,6 +27,7 @@
       "@utils/*": ["src/utils/*"],
       "@constants/*": ["src/constants/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@feedback/*": ["src/feedback/*"],
       "@store/*": ["src/store/*"],
       "@validations/*": ["src/validations/*"]
     }

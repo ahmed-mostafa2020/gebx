@@ -13,6 +13,8 @@ import CategoriesSection from "@components/sections/CategoriesSection";
 import CommitmentsSection from "@components/sections/CommitmentsSection";
 import PartnersSection from "@components/sections/PartnersSection";
 
+import FullScreenLoading from "@feedback/FullScreenLoading";
+
 const fetchedData = async () => {
   const response = await axios.get(`${END_POINTS.BASE}${END_POINTS.HOME}`, {
     headers: {
@@ -92,24 +94,30 @@ export default function Home() {
 
   return (
     <>
-      {(isLoading || isFetching) && "loading..."}
+      {isLoading || isFetching ? (
+        <div className="centered w-full min-h-screen">
+          <FullScreenLoading status="pending" />
+        </div>
+      ) : (
+        <>
+          <HeroSection heroData={heroData} />
+
+          <CommitmentsSection commitmentsData={commitmentsData} />
+
+          <GlobalImpact globalData={globalData} />
+
+          <SocialResponsibility
+            socialResponsibilitiesData={socialResponsibilitiesData}
+          />
+
+          <News newsData={newsData} />
+
+          <CategoriesSection />
+
+          <PartnersSection partnersData={partnersData} />
+        </>
+      )}
       {error && <p>error</p>}
-
-      <HeroSection heroData={heroData} />
-
-      <CommitmentsSection commitmentsData={commitmentsData} />
-
-      <GlobalImpact globalData={globalData} />
-
-      <SocialResponsibility
-        socialResponsibilitiesData={socialResponsibilitiesData}
-      />
-
-      <News newsData={newsData} />
-
-      <CategoriesSection />
-
-      <PartnersSection partnersData={partnersData} />
     </>
   );
 }
