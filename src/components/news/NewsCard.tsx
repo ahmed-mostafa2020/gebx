@@ -1,16 +1,17 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 type NewsItem = {
-  image: StaticImageData;
+  id?: number;
+  image: string;
   date: string;
   description: string;
-  link: string;
+  slug: string;
 };
 
-const NewsCard = ({ image, date, description, link }: NewsItem) => {
+const NewsCard = ({ image, date, description, slug }: NewsItem) => {
   return (
     <div className="centered mx-auto flex-col gap-6 w-[440px] bg-[#02304755] rounded-2xl py-14 px-10">
       <Image
@@ -18,7 +19,7 @@ const NewsCard = ({ image, date, description, link }: NewsItem) => {
         alt="news"
         width={240}
         height={240}
-        className="rounded-full"
+        className="rounded-full h-[240px] w-[240px]"
       />
 
       <div className="w-full flex">
@@ -32,7 +33,7 @@ const NewsCard = ({ image, date, description, link }: NewsItem) => {
       </article>
 
       <Link
-        href={link}
+        href={slug}
         className="centered border mt-2 text-sm w-[235px] h-[50px] text-center border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
       >
         Read More..

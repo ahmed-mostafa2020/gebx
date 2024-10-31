@@ -22,10 +22,41 @@ const fetchedData = async () => {
   return response.data.data;
 };
 
+type HerosItem = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  link: string | null;
+};
+
+type CommitmentItem = {
+  id: number;
+  image: string;
+  description: string;
+  slug: string;
+  date?: string;
+};
+
+type GlobalItem = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+};
+
 type SocialResponsibilitiesItem = {
   id: number;
   image: string;
   title: string;
+  description: string;
+  slug: string;
+};
+
+type NewsItem = {
+  id: number;
+  image: string;
+  date: string;
   description: string;
   slug: string;
 };
@@ -45,28 +76,36 @@ export default function Home() {
     staleTime: 300000, // 5 minutes
   });
 
+  const heroData: HerosItem[] = data?.slider;
+
+  const commitmentsData: CommitmentItem[] = data?.commitment;
+
   const socialResponsibilitiesData: SocialResponsibilitiesItem =
     data?.social_responsibility;
 
+  const globalData: GlobalItem[] = data?.global_impact;
+
+  const newsData: NewsItem[] = data?.news;
+
   const partnersData: PartnerItem[] = data?.partners;
-  console.log(partnersData);
+  console.log(newsData);
 
   return (
     <>
       {(isLoading || isFetching) && "loading..."}
       {error && <p>error</p>}
 
-      <HeroSection />
+      <HeroSection heroData={heroData} />
 
-      <CommitmentsSection />
+      <CommitmentsSection commitmentsData={commitmentsData} />
 
-      <GlobalImpact />
+      <GlobalImpact globalData={globalData} />
 
       <SocialResponsibility
         socialResponsibilitiesData={socialResponsibilitiesData}
       />
 
-      <News />
+      <News newsData={newsData} />
 
       <CategoriesSection />
 

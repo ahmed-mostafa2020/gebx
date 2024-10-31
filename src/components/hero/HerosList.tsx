@@ -1,6 +1,5 @@
 "use client";
 
-import { StaticImageData } from "next/image";
 import Hero from "./Hero";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,19 +12,19 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 type HerosItem = {
-  id?: number;
-  image: StaticImageData;
+  id: number;
+  image: string;
   title: string;
   description: string;
-  link: string;
+  link: string | null;
 };
 
-interface HerosListProps {
-  herosList: HerosItem[];
+interface HerosProps {
+  heroData: HerosItem[];
 }
 
-const HerosList = ({ herosList }: HerosListProps) => {
-  const renderedHeros = herosList.map((hero) => (
+const HerosList = ({ heroData }: HerosProps) => {
+  const renderedHeros = heroData?.map((hero) => (
     <SwiperSlide key={hero.id}>
       <Hero
         image={hero.image}

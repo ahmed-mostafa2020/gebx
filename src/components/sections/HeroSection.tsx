@@ -1,55 +1,20 @@
 "use client";
 
-import { StaticImageData } from "next/image";
-
 import HerosList from "../hero/HerosList";
-
-import heroImage from "@assets/hero1.png";
 
 type HerosItem = {
   id: number;
-  image: StaticImageData;
+  image: string;
   title: string;
   description: string;
-  link: string;
+  link: string | null;
 };
 
-const HeroSection = () => {
-  const herosList: HerosItem[] = [
-    {
-      id: 1,
-      image: heroImage,
-      title: "ONE SUSTAINABILITY",
-      description:
-        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
-      link: "/",
-    },
-    {
-      id: 2,
-      image: heroImage,
-      title: "ONE SUSTAINABILITY",
-      description:
-        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
-      link: "/",
-    },
-    {
-      id: 3,
-      image: heroImage,
-      title: "ONE SUSTAINABILITY",
-      description:
-        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
-      link: "/",
-    },
-    {
-      id: 4,
-      image: heroImage,
-      title: "ONE SUSTAINABILITY",
-      description:
-        "Seamlessly Uniting Data Using AIOT For Proactive Sustainability Strategy & Realtime Reporting",
-      link: "/",
-    },
-  ];
+interface HerosProps {
+  heroData: HerosItem[];
+}
 
+const HeroSection = ({ heroData }: HerosProps) => {
   return (
     <section className="hero-section relative mt-[-86px] overflow-hidden">
       <div className="absolute pointer-events-none w-full z-[2] h-full mt-[86px] px-10">
@@ -62,7 +27,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <HerosList herosList={herosList} />
+      <HerosList heroData={heroData} />
     </section>
   );
 };

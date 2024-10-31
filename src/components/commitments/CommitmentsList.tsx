@@ -19,8 +19,7 @@ interface CommitmentListProps {
 }
 
 const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
-  const [activeIndex, setActiveIndex] = useState(0); // Start with the first commitment
-
+  const [activeIndex, setActiveIndex] = useState(0);
   const handlePrev = () => {
     setActiveIndex(
       (prevIndex) =>
