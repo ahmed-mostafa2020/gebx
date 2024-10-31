@@ -4,7 +4,7 @@ const FullScreenLoading = ({ status }) => {
   return (
     <Backdrop
       sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
-      open={status == "pending" && open}
+      open={status == "pending" && true}
     >
       <CircularProgress color="warning" />
     </Backdrop>
