@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type HerosItem = {
   id?: number;
@@ -10,15 +13,36 @@ type HerosItem = {
 };
 
 const Hero = ({ image, link, title, description }: HerosItem) => {
+  const [showVideo, setShowVideo] = useState<boolean>(true);
+
+  useEffect(() => {
+    setShowVideo(image?.toLowerCase().endsWith(".mp4") ?? false);
+  }, [image]);
+
   return (
     <div className="h-[830px]">
-      <Image
-        width={100}
-        height={100}
-        src={image}
-        alt="backgroundImage"
-        className="absolute w-full h-[-webkit-fill-available] object-cover"
-      />
+      {showVideo ? (
+        <video
+          autoPlay
+          loop
+          muted
+          controls
+          preload="metadata"
+          className="absolute w-full h-[-webkit-fill-available] object-cover"
+        >
+          <source src={image} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <Image
+          width={100}
+          height={100}
+          src={image}
+          alt="backgroundImage"
+          className="absolute w-full h-[-webkit-fill-available] object-cover"
+        />
+      )}
+
       <div className="absolute inset-0 bg-[#023047] opacity-20"></div>
 
       <div className="mx-10 mb-10 pt-[86px] h-[-webkit-fill-available]">
