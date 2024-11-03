@@ -21,7 +21,7 @@ const PartnersSection = ({ partnersData }: PartnerProps) => {
   const settings = {
     autoplay: true,
     autoplaySpeed: 0, // Set to 0 for continuous scrolling
-    slidesToShow: partnersData?.length, // Number of slides visible at once
+    slidesToShow: partnersData?.length > 7 ? 7 : partnersData?.length, // Number of slides visible at once
     slidesToScroll: 1, // Number of slides to scroll at a time
     cssEase: "linear",
     infinite: true,
