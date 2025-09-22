@@ -1,20 +1,8 @@
 "use client";
 
-import HerosList from "../hero/HerosList";
+import HerosList from "./HerosList";
 
-type HerosItem = {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-  link: string | null;
-};
-
-interface HerosProps {
-  heroData: HerosItem[];
-}
-
-const HeroSection = ({ heroData }: HerosProps) => {
+const HeroSection = ({ heroData }) => {
   return (
     <section className="hero-section relative mt-[-86px] overflow-hidden">
       <div className="absolute pointer-events-none w-full z-[2] h-full mt-[86px] px-10">

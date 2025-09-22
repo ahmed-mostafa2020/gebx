@@ -7,33 +7,31 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 
-type PartnerItem = {
-  id: number;
-  image: string;
-  title: string;
-  slug: string;
-};
-interface PartnerProps {
-  partnersData: PartnerItem[];
-}
-
-const PartnersSection = ({ partnersData }: PartnerProps) => {
+const PartnersSection = ({ partnersData }) => {
   const settings = {
-    autoplay: true,
+    // Corrected properties
+    autoplay: true, // Use a boolean value for autoplay
     autoplaySpeed: 0, // Set to 0 for continuous scrolling
-    slidesToShow: partnersData?.length > 7 ? 7 : partnersData?.length, // Number of slides visible at once
-    slidesToScroll: 1, // Number of slides to scroll at a time
-    cssEase: "linear",
-    infinite: true,
+    infinite: true, // Use a boolean value for infinite looping
+    speed: 5000, // A valid property for animation speed
+    cssEase: "linear", // Keep as a string
+    slidesToShow: partnersData?.length > 7 ? 7 : partnersData?.length,
+    slidesToScroll: 1, // Use a numeric value
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024, // Use a numeric breakpoint
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 768, // Use a numeric breakpoint
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480, // Use a numeric breakpoint
         settings: {
           slidesToShow: 2,
         },

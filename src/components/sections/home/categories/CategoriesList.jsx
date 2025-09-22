@@ -9,26 +9,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Category from "./Category";
 
-type SubCategory = {
-  id: number;
-  link: string;
-  title: string;
-  description: string;
-};
-
-type CategoriesItem = {
-  id?: number;
-  image: StaticImageData;
-  title: string;
-  link: string;
-  subCategories: SubCategory[];
-};
-
-interface CategoriesListProps {
-  categoriesList: CategoriesItem[];
-}
-
-const CategoriesList = ({ categoriesList }: CategoriesListProps) => {
+const CategoriesList = ({ categoriesList }) => {
   const renderedCategories = categoriesList.map((category) => (
     <SwiperSlide key={category.id}>
       <Category
@@ -47,3 +28,4 @@ const CategoriesList = ({ categoriesList }: CategoriesListProps) => {
   );
 };
 export default CategoriesList;
+

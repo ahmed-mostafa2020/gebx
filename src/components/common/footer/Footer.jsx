@@ -42,7 +42,7 @@ const Footer = () => {
     <Link
       href={link.link}
       key={link.name}
-      className="w-fit border-b border-transparent hover:border-white transition-all duration-200 ease-linear text-sm capitalize"
+      className="w-fit border-b border-transparent hover-white transition-all duration-200 ease-linear text-sm capitalize"
     >
       {link.name}
     </Link>
@@ -71,7 +71,7 @@ const Footer = () => {
     <Link
       href={link.link}
       key={link.name}
-      className="w-fit border-b border-transparent hover:border-white transition-all duration-200 ease-linear text-sm capitalize"
+      className="w-fit border-b border-transparent hover-white transition-all duration-200 ease-linear text-sm capitalize"
     >
       {link.name}
     </Link>
@@ -92,7 +92,7 @@ const Footer = () => {
     <Link
       href={link.link}
       key={link.name}
-      className="w-fit border-b border-transparent hover:border-white transition-all duration-200 ease-linear text-sm capitalize"
+      className="w-fit border-b border-transparent hover-white transition-all duration-200 ease-linear text-sm capitalize"
     >
       {link.name}
     </Link>
@@ -163,10 +163,7 @@ const Footer = () => {
 
       <Container maxWidth="lg" className="relative pt-20">
         <Grid container spacing={6}>
-          <Grid
-            size={{ xs: 12, sm: 6, lg: 4.5 }}
-            className="flex gap-10 flex-col"
-          >
+          <Grid size={{ lg: 5 }} className="flex gap-10 flex-col">
             <Link href="/" className="w-fit select-none">
               <Image src={logoSmall} alt="logo" />
             </Link>
@@ -176,25 +173,22 @@ const Footer = () => {
             </p>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, lg: 2 }} className="flex flex-col gap-3">
+          <Grid size={{ lg: 5 }} className="flex flex-col gap-3">
             <h6 className="uppercase text-lg font-medium">About Us</h6>
             <div className="flex flex-col gap-6">{renderedAboutList}</div>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, lg: 2 }} className="flex flex-col gap-3">
+          <Grid size={{ lg: 5 }} className="flex flex-col gap-3">
             <h6 className=" text-lg font-medium">GebX IN ACTION</h6>
             <div className="flex flex-col gap-6">{renderedActionList}</div>
           </Grid>
 
-          <Grid
-            size={{ xs: 12, sm: 6, lg: 1.5 }}
-            className="flex flex-col gap-3"
-          >
+          <Grid size={{ lg: 5 }} className="flex flex-col gap-3">
             <h6 className="uppercase text-lg font-medium">MEDIA</h6>
             <div className="flex flex-col gap-6">{renderedMediaList}</div>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, lg: 2 }} className="flex flex-col gap-4">
+          <Grid size={{ lg: 5 }} className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
               <h6 className="uppercase text-lg font-medium">Contact Us</h6>
               {renderedContactUSList}

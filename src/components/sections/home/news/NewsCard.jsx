@@ -3,15 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type NewsItem = {
-  id?: number;
-  image: string;
-  date: string;
-  description: string;
-  slug: string;
-};
-
-const NewsCard = ({ image, date, description, slug }: NewsItem) => {
+const NewsCard = ({ image, date, description, slug }) => {
   return (
     <div className="centered mx-auto flex-col gap-6 w-[440px] bg-[#02304755] rounded-2xl py-14 px-10">
       <Image
@@ -34,7 +26,7 @@ const NewsCard = ({ image, date, description, slug }: NewsItem) => {
 
       <Link
         href={slug}
-        className="centered border mt-2 text-sm w-[235px] h-[50px] text-center border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+        className="centered border mt-2 text-sm w-[235px] h-[50px] text-center border-white rounded-md hover-black transition-all duration-300 ease-in-out"
       >
         Read More..
       </Link>
@@ -43,3 +35,4 @@ const NewsCard = ({ image, date, description, slug }: NewsItem) => {
 };
 
 export default NewsCard;
+

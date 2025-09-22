@@ -8,7 +8,7 @@ const LowerBar = () => {
       <div className="flex items-center gap-3">
         <Link
           href="/privacy"
-          className="border-b border-transparent hover:border-white transition-all ease-linear duration-200"
+          className="border-b border-transparent hover-white transition-all ease-linear duration-200"
         >
           Privacy Policy
         </Link>
@@ -17,7 +17,7 @@ const LowerBar = () => {
 
         <Link
           href="/terms"
-          className="border-b border-transparent hover:border-white transition-all ease-linear duration-200"
+          className="border-b border-transparent hover-white transition-all ease-linear duration-200"
         >
           Terms & Conditions
         </Link>
@@ -27,3 +27,4 @@ const LowerBar = () => {
 };
 
 export default LowerBar;
+

@@ -8,7 +8,7 @@ import TemporaryDrawer from "./TemporaryDrawer";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

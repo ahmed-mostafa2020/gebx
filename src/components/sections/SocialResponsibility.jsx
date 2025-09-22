@@ -7,21 +7,9 @@ import group from "@assets/G.png";
 
 import { Container } from "@mui/material";
 
-type SocialResponsibilitiesItem = {
-  id?: number;
-  image: string;
-  title: string;
-  description: string;
-  slug: string;
-};
-
-interface SocialResponsibilityProps {
-  socialResponsibilitiesData: SocialResponsibilitiesItem;
-}
-
 const SocialResponsibility = ({
   socialResponsibilitiesData,
-}: SocialResponsibilityProps) => {
+}) => {
   return (
     <section className="relative pb-28 bg-[#023047]">
       <Image
@@ -29,7 +17,7 @@ const SocialResponsibility = ({
         width={100}
         height={100}
         alt="footerBackground"
-        className="h-[1015px] md:h-[820px] lg:h-[790px] object-bottom absolute w-full object-cover"
+        className="h-[1015px] md-[820px] lg-[790px] object-bottom absolute w-full object-cover"
       />
 
       <Container maxWidth="lg" className="relative pt-20">
@@ -63,7 +51,7 @@ const SocialResponsibility = ({
 
             <Link
               href={`/${socialResponsibilitiesData?.slug}`}
-              className="border text-center capitalize  py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+              className="border text-center capitalize  py-2 border-white rounded-md hover-black transition-all duration-300 ease-in-out"
             >
               Discover More
             </Link>
@@ -75,3 +63,4 @@ const SocialResponsibility = ({
 };
 
 export default SocialResponsibility;
+

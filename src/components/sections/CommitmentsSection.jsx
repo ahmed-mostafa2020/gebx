@@ -5,26 +5,14 @@ import Link from "next/link";
 
 import { useState } from "react";
 
-import SectionTemplate from "../common/reusable/SectionTemplate";
+import SectionTemplate from "@components/common/reusable/SectionTemplate";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import shapes from "@assets/shapes.png";
 
-type CommitmentItem = {
-  id: number;
-  image: string;
-  description: string;
-  slug: string;
-  date?: string;
-};
-
-interface CommitmentsProps {
-  commitmentsData: CommitmentItem[];
-}
-
-const CommitmentsSection = ({ commitmentsData }: CommitmentsProps) => {
+const CommitmentsSection = ({ commitmentsData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
@@ -49,20 +37,10 @@ const CommitmentsSection = ({ commitmentsData }: CommitmentsProps) => {
       <div
         key={commitment?.id}
         className={`transition-transform duration-500 ease-in-out mx-[-20px] ${
-          isActive
-            ? "scale-125 z-3"
-            : isBefore || isAfter
-            ? "scale-90"
-            : "scale-75"
+          isActive ? "scale-125 z-30" : ""
         }`}
       >
-        <Image
-          width={200}
-          height={200}
-          src={commitment?.image}
-          alt="commitment image"
-          className="rounded-full object-cover w-[200px] h-[200px]"
-        />
+        {/* Your component content goes here */}
       </div>
     );
   });
@@ -104,7 +82,7 @@ const CommitmentsSection = ({ commitmentsData }: CommitmentsProps) => {
             href={
               commitmentsData ? `/${commitmentsData[activeIndex]?.slug}` : "/"
             }
-            className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+            className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover-black transition-all duration-300 ease-in-out"
           >
             Discover More
           </Link>

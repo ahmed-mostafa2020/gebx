@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@store/*": ["store/*"],
+      "@constants/*": ["constants/*"],
+      "@feedback/*": ["feedback/*"],
+      "@hooks/*": ["hooks/*"],
+      "@layouts/*": ["layouts/*"],
+      "@validations/*": ["validations/*"],
+      "@lib/*": ["lib/*"]
+    }
+  }
+}

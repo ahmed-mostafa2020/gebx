@@ -11,19 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-type HerosItem = {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-  link: string | null;
-};
-
-interface HerosProps {
-  heroData: HerosItem[];
-}
-
-const HerosList = ({ heroData }: HerosProps) => {
+const HerosList = ({ heroData }) => {
   const renderedHeros = heroData?.map((hero) => (
     <SwiperSlide key={hero.id}>
       <Hero

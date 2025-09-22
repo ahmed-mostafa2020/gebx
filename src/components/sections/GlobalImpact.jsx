@@ -1,28 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import SectionTemplate from "../common/reusable/SectionTemplate";
+import SectionTemplate from "@components/common/reusable/SectionTemplate";
 import Grid from "@mui/material/Grid2";
 
 import globalBg from "@assets/globalBg.png";
 import logo from "@assets/logoMed.png";
 
-type GlobalItem = {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-};
-interface GlobalProps {
-  globalData: GlobalItem[];
-}
-const GlobalImpact = ({ globalData }: GlobalProps) => {
-  const firstOfTitle = (title: string): string => {
+const GlobalImpact = ({ globalData }) => {
+  const firstOfTitle = (title) => {
     const firstSpace = title.indexOf(" ");
     const percentage = title.substring(0, firstSpace);
     return percentage;
   };
-  const lastOfTitle = (title: string): string => {
+  const lastOfTitle = (title) => {
     const firstSpace = title.indexOf(" ");
     const restOfText = title.substring(firstSpace + 1);
     return restOfText;
@@ -30,7 +21,7 @@ const GlobalImpact = ({ globalData }: GlobalProps) => {
 
   const renderedList = globalData?.map((item) => (
     <Grid
-      size={{ xs: 12, sm: 6, lg: 6 }}
+      size={{ xs: 12, sm: 6, lg: 3 }}
       key={item.id}
       className="flex flex-col items-center justify-center"
     >
@@ -47,7 +38,7 @@ const GlobalImpact = ({ globalData }: GlobalProps) => {
         </div>
       </div>
 
-      <article className="text-center text-sm font-extralight lg:max-w-[44%] text-pretty">
+      <article className="text-center text-sm font-extralight lg-w-[44%] text-pretty">
         {item.description}
       </article>
     </Grid>

@@ -8,19 +8,15 @@ import "swiper/swiper-bundle.css";
 
 import { Container } from "@mui/material";
 
-type ChildrenProps = {
-  children: React.ReactNode;
-};
-
-const SwiperSlider = ({ children }: ChildrenProps) => {
+const SwiperSlider = ({ children }) => {
   const settings = {
     spaceBetween: 10,
     slidesPerView: 1, // Default to 1 slide
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     breakpoints: {
       640: {
         slidesPerView: 1, // Show 1 slide

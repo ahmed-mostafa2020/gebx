@@ -9,25 +9,10 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import { Container } from "@mui/material";
 import { useState } from "react";
 
-type SubCategory = {
-  id: number;
-  link: string;
-  title: string;
-  description: string;
-};
+const Category = ({ image, link, title, subCategories }) => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
-type CategoriesItem = {
-  id?: number;
-  image: StaticImageData;
-  title: string;
-  link: string;
-  subCategories: SubCategory[];
-};
-
-const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
-  const [expandedIndex, setExpandedIndex] = useState<null | number>(null);
-
-  const handleMouseEnter = (index: number) => {
+  const handleMouseEnter = (index) => {
     setExpandedIndex(index);
   };
   const handleMouseLeave = () => {
@@ -84,3 +69,4 @@ const Category = ({ image, link, title, subCategories }: CategoriesItem) => {
 };
 
 export default Category;
+

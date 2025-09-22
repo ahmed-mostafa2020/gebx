@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 
@@ -31,16 +30,12 @@ import Footer from "@components/common/footer/Footer";
 //   weight: "100 900",
 // });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Gbex | Home",
   description: "Gebx for technologies solutions",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`text-white`}>

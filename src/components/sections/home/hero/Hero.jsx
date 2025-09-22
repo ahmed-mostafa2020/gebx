@@ -4,16 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type HerosItem = {
-  id?: number;
-  image: string;
-  title: string;
-  description: string;
-  link: string | null;
-};
-
-const Hero = ({ image, link, title, description }: HerosItem) => {
-  const [showVideo, setShowVideo] = useState<boolean>(true);
+const Hero = ({ image, link, title, description }) => {
+  const [showVideo, setShowVideo] = useState(true);
 
   useEffect(() => {
     setShowVideo(image?.toLowerCase().endsWith(".mp4") ?? false);

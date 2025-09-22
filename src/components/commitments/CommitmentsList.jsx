@@ -7,18 +7,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Link from "next/link";
 
-type CommitmentItem = {
-  id?: number;
-  image: StaticImageData;
-  description: string;
-  link: string;
-};
-
-interface CommitmentListProps {
-  commitmentsList: CommitmentItem[];
-}
-
-const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
+const CommitmentsList = ({ commitmentsList }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const handlePrev = () => {
     setActiveIndex(
@@ -44,20 +33,7 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
         className={`transition-transform duration-500 ease-in-out mx-[-20px] ${
           isActive
             ? "scale-125 z-3"
-            : isBefore || isAfter
-            ? "scale-90"
-            : "scale-75"
-        }`}
-      >
-        <Image
-          width={200}
-          height={200}
-          src={commitment.image.src}
-          alt={commitment.description}
-          className="rounded-full object-cover"
-        />
-      </div>
-    );
+            );
   });
 
   return (
@@ -80,7 +56,7 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
 
       <Link
         href={commitmentsList[activeIndex].link}
-        className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover:bg-black transition-all duration-300 ease-in-out"
+        className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover-black transition-all duration-300 ease-in-out"
       >
         Discover More
       </Link>
@@ -89,3 +65,4 @@ const CommitmentsList = ({ commitmentsList }: CommitmentListProps) => {
 };
 
 export default CommitmentsList;
+
