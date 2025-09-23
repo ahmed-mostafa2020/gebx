@@ -8,13 +8,13 @@ const config = {
     extend: {
       colors: {
         mainColor: "#F5C34B",
-        secColor: "#FFAC2F",
+        secColor: "#FFC000",
         homeBg: "#f3f5f6",
         sidePageBg: "#F0F4F7",
         upperBarBg: "#112137",
         headerBg: "#012F47",
         figure: "#f4f4f46e",
-        textDark: "#041E42",
+        textDark: "#023047",
         textLight: "#626974",
         border: "#EAEAEA",
         linksHover: "#F37521",

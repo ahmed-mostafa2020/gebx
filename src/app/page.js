@@ -7,6 +7,7 @@ import { END_POINTS } from "@utils/APIs";
 
 import HeroSection from "@components/sections/home/hero/HeroSection";
 import GlobalImpact from "@components/sections/GlobalImpact";
+import LeadingSection from "@components/sections/home/leading/LeadingSection";
 import SocialResponsibility from "@components/sections/SocialResponsibility";
 import News from "@components/sections/home/news/News";
 import CategoriesSection from "@components/sections/home/categories/CategoriesSection";
@@ -38,6 +39,8 @@ export default function Home() {
 
   const commitmentsData = data?.commitment;
 
+  const leadingData = data?.leading;
+
   const socialResponsibilitiesData = data?.social_responsibility;
 
   const globalData = data?.global_impact;
@@ -60,6 +63,8 @@ export default function Home() {
           <CommitmentsSection commitmentsData={commitmentsData} />
 
           <GlobalImpact globalData={globalData} />
+
+          <LeadingSection leadingData={leadingData} />
 
           <SocialResponsibility
             socialResponsibilitiesData={socialResponsibilitiesData}
