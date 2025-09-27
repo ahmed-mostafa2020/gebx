@@ -14,24 +14,33 @@ import CommitmentsSection from "@components/sections/CommitmentsSection";
 import PartnersSection from "@components/sections/PartnersSection";
 
 import FullScreenLoading from "@feedback/FullScreenLoading";
+import { useLocale } from 'next-intl';
 
-
-const fetchedData = async () => {
-  const response = await axios.get(`${END_POINTS.MAIN}/${END_POINTS.HOME}`, {
-    headers: {
-      Authorization: "5rkYT26RQeYJC2vd4PPS",
-    },
-  });
-  return response.data.data;
+const fetchedData = async (locale) => {
+  try {
+    console.log("Fetching data from:", `${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`);
+    const response = await axios.get(`${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`, {
+      headers: {
+        Authorization: "5rkYT26RQeYJC2vd4PPS",
+      },
+    });
+    console.log("API Response success:", response.data);
+    return response.data.data;
+  } catch (error) {
+    console.error("API Error:", error.message);
+    throw error;
+  }
 };
 
-
 export default function Home() {
+  const locale = useLocale();
+  
   const { data, error, isLoading, isFetching } = useQuery({
-    queryKey: ["fetchedData"],
-    queryFn: fetchedData,
+    queryKey: ["fetchedData", locale],
+    queryFn: () => fetchedData(locale),
     cacheTime: 600000, // 10 minutes
     staleTime: 300000, // 5 minutes
+    retry: 1,
   });
 
   const heroData = data?.slider;

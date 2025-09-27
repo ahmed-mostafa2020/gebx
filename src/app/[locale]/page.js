@@ -15,10 +15,10 @@ import CategoriesSection from "@components/sections/home/categories/CategoriesSe
 import CommitmentsSection from "@components/sections/CommitmentsSection";
 import PartnersSection from "@components/sections/PartnersSection";
 
-const fetchedData = async () => {
+const fetchedData = async (locale) => {
   try {
-    console.log("Fetching data from:", `${END_POINTS.MAIN}/${END_POINTS.HOME}`);
-    const response = await axios.get(`${END_POINTS.MAIN}/${END_POINTS.HOME}`, {
+    console.log("Fetching data from:", `${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`);
+    const response = await axios.get(`${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`, {
       headers: {
         Authorization: "5rkYT26RQeYJC2vd4PPS",
       },
@@ -36,8 +36,8 @@ export default function Home() {
   const locale = useLocale();
   
   const { data, error, isLoading, isFetching } = useQuery({
-    queryKey: ["fetchedData"],
-    queryFn: fetchedData,
+    queryKey: ["fetchedData", locale],
+    queryFn: () => fetchedData(locale),
     staleTime: 300000, // 5 minutes
     retry: 1,
   });

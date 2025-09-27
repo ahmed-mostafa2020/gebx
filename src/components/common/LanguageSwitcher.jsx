@@ -1,45 +1,57 @@
 "use client";
 
-import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useLocale } from 'next-intl';
 import { Button } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 
 const LanguageSwitcher = () => {
-  const t = useTranslations('common');
-  const locale = useLocale();
-  const router = useRouter();
   const pathname = usePathname();
 
-  const switchLanguage = () => {
-    const newLocale = locale === 'en' ? 'ar' : 'en';
-    
-    // Remove the current locale from the pathname
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '');
-    
-    // Navigate to the new locale
-    router.push(`/${newLocale}${pathWithoutLocale}`);
+  // Extract current locale from pathname (use pathname as source of truth)
+  const currentLocale = pathname.match(/^\/(en|ar)/)?.[1] || 'en';
+
+  const switchLocale = (targetLocale) => {
+    // Remove the current locale from the pathname - exact same logic as guestna-b2b
+    const newPathname = pathname.replace(/^\/(en|ar)/, "");
+    return `/${targetLocale}${newPathname}`;
   };
 
+  const targetLocale = currentLocale === 'en' ? 'ar' : 'en';
+  // Show the target language (what you'll switch TO)
+  const buttonText = currentLocale === 'en' ? 'العربية' : 'English';
+  
+  const switchUrl = switchLocale(targetLocale);
+
+  console.log('LanguageSwitcher Debug:', {
+    currentPathname: pathname,
+    currentLocale,
+    targetLocale,
+    buttonText,
+    switchUrl
+  });
+
   return (
-    <Button
-      onClick={switchLanguage}
-      variant="outlined"
-      startIcon={<LanguageIcon />}
-      sx={{
-        color: 'white',
-        borderColor: 'white',
-        '&:hover': {
-          borderColor: '#FFC000',
-          backgroundColor: 'rgba(255, 192, 0, 0.1)',
-        },
-        minWidth: '120px',
-        textTransform: 'none',
-        fontSize: '14px'
-      }}
-    >
-      {t('switchLanguage')}
-    </Button>
+    <Link href={switchUrl} style={{ textDecoration: 'none' }}>
+      <Button
+        variant="outlined"
+        startIcon={<LanguageIcon />}
+        sx={{
+          color: 'white',
+          borderColor: 'white',
+          '&:hover': {
+            borderColor: '#FFC000',
+            backgroundColor: 'rgba(255, 192, 0, 0.1)',
+          },
+          minWidth: '120px',
+          textTransform: 'none',
+          fontSize: '14px'
+        }}
+      >
+        {buttonText}
+      </Button>
+    </Link>
   );
 };
 
