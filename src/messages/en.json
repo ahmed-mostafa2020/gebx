@@ -1,0 +1,26 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "news": "News",
+    "contact": "Contact",
+    "readMore": "Read More",
+    "discoverMore": "Discover More",
+    "switchLanguage": "العربية"
+  },
+  "home": {
+    "heroTitle": "Welcome to GebX",
+    "heroDescription": "Leading the way in sustainable energy solutions",
+    "newsInsights": "News & Insights",
+    "globalImpact": "Emirati excellence global impact",
+    "socialResponsibility": "Our Social Responsibility",
+    "commitments": "Imagine a Sustainable World - Our Commitment",
+    "partnersTitle": "Our partners of impact",
+    "categories": "Categories"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "close": "Close"
+  }
+}

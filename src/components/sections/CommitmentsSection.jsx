@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useState } from "react";
+import { useTranslations, useLocale } from 'next-intl';
 
 import SectionTemplate from "@components/common/reusable/SectionTemplate";
 
@@ -14,6 +15,9 @@ import shapes from "@assets/shapes.png";
 
 const CommitmentsSection = ({ commitmentsData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const t = useTranslations('home');
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
 
   const handlePrev = () => {
     setActiveIndex(
@@ -57,8 +61,7 @@ const CommitmentsSection = ({ commitmentsData }) => {
 
       <SectionTemplate
         image={shapes}
-        title="Imagine a Sustainable World -"
-        span="Our Commitment"
+        title={t('commitments')}
         backgroundColor="bg-[#023047]"
       >
         <div className="flex flex-col items-center gap-16 relative z-[2] w-full">
@@ -80,11 +83,11 @@ const CommitmentsSection = ({ commitmentsData }) => {
 
           <Link
             href={
-              commitmentsData ? `/${commitmentsData[activeIndex]?.slug}` : "/"
+              commitmentsData ? `/${locale}/${commitmentsData[activeIndex]?.slug}` : `/${locale}`
             }
             className="border text-center w-[280px]  capitalize  py-2 border-white rounded-md hover-black transition-all duration-300 ease-in-out"
           >
-            Discover More
+            {tCommon('discoverMore')}
           </Link>
         </div>
       </SectionTemplate>

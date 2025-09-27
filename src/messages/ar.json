@@ -1,0 +1,26 @@
+{
+  "common": {
+    "home": "الرئيسية",
+    "about": "حولنا",
+    "products": "المنتجات",
+    "news": "الأخبار",
+    "contact": "اتصل بنا",
+    "readMore": "اقرأ المزيد",
+    "discoverMore": "اكتشف المزيد",
+    "switchLanguage": "English"
+  },
+  "home": {
+    "heroTitle": "مرحباً بكم في جيب إكس",
+    "heroDescription": "نقود الطريق في حلول الطاقة المستدامة",
+    "newsInsights": "الأخبار والرؤى",
+    "globalImpact": "التميز الإماراتي والتأثير العالمي",
+    "socialResponsibility": "مسؤوليتنا الاجتماعية",
+    "commitments": "تخيل عالماً مستداماً - التزامنا",
+    "partnersTitle": "شركاؤنا في التأثير",
+    "categories": "الفئات"
+  },
+  "navigation": {
+    "menu": "القائمة",
+    "close": "إغلاق"
+  }
+}

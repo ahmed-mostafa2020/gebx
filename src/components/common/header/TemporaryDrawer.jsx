@@ -11,13 +11,27 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
+import { useTranslations, useLocale } from 'next-intl';
 
 const TemporaryDrawer = () => {
   const [open, setOpen] = React.useState(false);
+  const t = useTranslations('common');
+  const locale = useLocale();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
+  const navLinks = [
+    { name: t('about'), link: `/${locale}/about-us` },
+    { name: t('products'), link: `/${locale}/products` },
+    { name: "Industries", link: `/${locale}/industries` },
+    { name: "Services", link: `/${locale}/services` },
+    { name: t('news'), link: `/${locale}/news` },
+    { name: "Careers", link: `/${locale}/careers` },
+    { name: t('contact'), link: `/${locale}/contact-us` },
+  ];
 
   const DrawerList = (
     <Box
@@ -26,22 +40,16 @@ const TemporaryDrawer = () => {
       onClick={toggleDrawer(false)}
     >
       <List>
-        {[
-          "About Us",
-          "Products",
-          "Industries",
-          "Services",
-          "News",
-          "Careers",
-          "Contact Us",
-        ].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+        {navLinks.map((navLink, index) => (
+          <ListItem key={navLink.name} disablePadding>
+            <Link href={navLink.link} className="w-full">
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={navLink.name} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>

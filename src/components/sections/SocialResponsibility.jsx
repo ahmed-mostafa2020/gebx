@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations, useLocale } from 'next-intl';
 
 // import responsibilityBg from "@assets/ourSocialResponsibility.png";
 import logoSmall from "@assets/logoSmall.png";
@@ -10,6 +13,9 @@ import { Container } from "@mui/material";
 const SocialResponsibility = ({
   socialResponsibilitiesData,
 }) => {
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
+  
   return (
     <section className="relative pb-28 bg-[#023047]">
       <Image
@@ -50,10 +56,10 @@ const SocialResponsibility = ({
             </div>
 
             <Link
-              href={`/${socialResponsibilitiesData?.slug}`}
+              href={`/${locale}/${socialResponsibilitiesData?.slug}`}
               className="border text-center capitalize  py-2 border-white rounded-md hover-black transition-all duration-300 ease-in-out"
             >
-              Discover More
+              {tCommon('discoverMore')}
             </Link>
           </div>
         </div>

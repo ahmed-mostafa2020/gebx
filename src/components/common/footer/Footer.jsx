@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useLocale } from 'next-intl';
 
 import LowerBar from "./LowerBar";
 
@@ -15,27 +18,29 @@ import footerBgImage from "@assets/footer-bg.png";
 import logoSmall from "@assets/logoSmall.png";
 
 const Footer = () => {
+  const locale = useLocale();
+  
   // About Us
   const aboutList = [
     {
       name: "About Us",
-      link: "/about-us",
+      link: `/${locale}/about-us`,
     },
     {
       name: "Our Values",
-      link: "/values",
+      link: `/${locale}/values`,
     },
     {
       name: "Our Team",
-      link: "/team",
+      link: `/${locale}/team`,
     },
     {
       name: "Our Commitment",
-      link: "/commitment",
+      link: `/${locale}/commitment`,
     },
     {
       name: "GebX Academia",
-      link: "/academia",
+      link: `/${locale}/academia`,
     },
   ];
   const renderedAboutList = aboutList.map((link) => (
@@ -52,19 +57,19 @@ const Footer = () => {
   const actionList = [
     {
       name: "Our Partners",
-      link: "/partners",
+      link: `/${locale}/partners`,
     },
     {
       name: "Our Products",
-      link: "/products",
+      link: `/${locale}/products`,
     },
     {
       name: "Our Solutions",
-      link: "/solutions",
+      link: `/${locale}/solutions`,
     },
     {
       name: "Careers",
-      link: "/careers",
+      link: `/${locale}/careers`,
     },
   ];
   const renderedActionList = actionList.map((link) => (
@@ -81,11 +86,11 @@ const Footer = () => {
   const mediaList = [
     {
       name: "News",
-      link: "/news",
+      link: `/${locale}/news`,
     },
     {
       name: "Social Media",
-      link: "/social-media",
+      link: `/${locale}/social-media`,
     },
   ];
   const renderedMediaList = mediaList.map((link) => (
@@ -164,7 +169,7 @@ const Footer = () => {
       <Container maxWidth="lg" className="relative pt-20">
         <Grid container spacing={6}>
           <Grid size={{ lg: 5 }} className="flex gap-10 flex-col">
-            <Link href="/" className="w-fit select-none">
+            <Link href={`/${locale}`} className="w-fit select-none">
               <Image src={logoSmall} alt="logo" />
             </Link>
 

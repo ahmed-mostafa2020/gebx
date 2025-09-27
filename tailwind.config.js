@@ -55,6 +55,17 @@ const config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.rtl': {
+          direction: 'rtl',
+        },
+        '.ltr': {
+          direction: 'ltr',
+        },
+      });
+    },
+  ],
 };
 export default config;

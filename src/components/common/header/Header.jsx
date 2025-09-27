@@ -5,10 +5,14 @@ import logo from "@assets/logo.png";
 
 import { Container } from "@mui/material";
 import TemporaryDrawer from "./TemporaryDrawer";
+import LanguageSwitcher from "../LanguageSwitcher";
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from 'next-intl';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const locale = useLocale();
+  const t = useTranslations('common');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +31,13 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "About Us", link: "/about-us" },
-    { name: "Products", link: "/products" },
-    { name: "Industries", link: "/industries" },
-    { name: "Services", link: "/services" },
-    { name: "News", link: "/news" },
-    { name: "Careers", link: "/careers" },
-    { name: "Contact Us", link: "/contact-us" },
+    { name: t('about'), link: `/${locale}/about-us` },
+    { name: t('products'), link: `/${locale}/products` },
+    { name: "Industries", link: `/${locale}/industries` },
+    { name: "Services", link: `/${locale}/services` },
+    { name: t('news'), link: `/${locale}/news` },
+    { name: "Careers", link: `/${locale}/careers` },
+    { name: t('contact'), link: `/${locale}/contact-us` },
   ];
 
   const renderedNavLinks = navLinks.map((navLink) => (
@@ -53,7 +57,7 @@ const Header = () => {
         ${isScrolled ? "fixed top-0 left-0 right-0 " : "relative"}`}
     >
       <Container maxWidth="lg" className="flex justify-between items-center">
-        <Link href="/" className="w-fit select-none">
+        <Link href={`/${locale}`} className="w-fit select-none">
           <Image
             src={logo}
             alt="logo"
@@ -63,9 +67,13 @@ const Header = () => {
           />
         </Link>
 
-        <div className="hidden lg:flex  gap-8">{renderedNavLinks}</div>
+        <div className="hidden lg:flex items-center gap-8">
+          {renderedNavLinks}
+          <LanguageSwitcher />
+        </div>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center gap-4">
+          <LanguageSwitcher />
           <TemporaryDrawer />
         </div>
       </Container>
