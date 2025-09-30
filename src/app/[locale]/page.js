@@ -14,6 +14,7 @@ import News from "@components/sections/home/news/News";
 import CategoriesSection from "@components/sections/home/categories/CategoriesSection";
 import CommitmentsSection from "@components/sections/CommitmentsSection";
 import PartnersSection from "@components/sections/PartnersSection";
+import ImpactPillarsSection from "@components/sections/home/impactPillars";
 
 const fetchedData = async (locale) => {
   try {
@@ -64,6 +65,7 @@ export default function Home() {
   const heroData = data?.slider;
   const commitmentsData = data?.commitment;
   const leadingData = data?.leading;
+  const impactPillarsData = data?.impact_pillars;
   const socialResponsibilitiesData = data?.social_responsibility;
   const globalData = data?.global_impact;
   const newsData = data?.news;
@@ -75,6 +77,7 @@ export default function Home() {
       <CommitmentsSection commitmentsData={commitmentsData} />
       <GlobalImpact globalData={globalData} />
       <LeadingSection leadingData={leadingData} />
+      <ImpactPillarsSection impactPillarsData={impactPillarsData} />
       <SocialResponsibility socialResponsibilitiesData={socialResponsibilitiesData} />
       <News newsData={newsData} />
       <CategoriesSection />

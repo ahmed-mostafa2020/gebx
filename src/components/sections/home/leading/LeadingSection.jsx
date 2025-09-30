@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Container } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -8,8 +10,8 @@ const LeadingSection = ({ leadingData }) => {
   const t = useTranslations("home.leading");
 
   return (
-    <section className="bg-gray-100 py-16 px-6 md:px-12 lg:px-20 font-inter">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#F1F1F1] py-8 lg:py-16 font-inter">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
@@ -76,7 +78,7 @@ const LeadingSection = ({ leadingData }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

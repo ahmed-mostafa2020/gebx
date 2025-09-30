@@ -7,12 +7,12 @@ import { Container } from "@mui/material";
 import TemporaryDrawer from "./TemporaryDrawer";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useEffect, useState } from "react";
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from "next-intl";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const locale = useLocale();
-  const t = useTranslations('common');
+  const t = useTranslations("common");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +31,13 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: t('about'), link: `/${locale}/about-us` },
-    { name: t('products'), link: `/${locale}/products` },
+    { name: t("about"), link: `/${locale}/about-us` },
+    { name: t("products"), link: `/${locale}/products` },
     { name: "Industries", link: `/${locale}/industries` },
     { name: "Services", link: `/${locale}/services` },
-    { name: t('news'), link: `/${locale}/news` },
+    { name: t("news"), link: `/${locale}/news` },
     { name: "Careers", link: `/${locale}/careers` },
-    { name: t('contact'), link: `/${locale}/contact-us` },
+    { name: t("contact"), link: `/${locale}/contact-us` },
   ];
 
   const renderedNavLinks = navLinks.map((navLink) => (
@@ -64,6 +64,7 @@ const Header = () => {
             height={90}
             width={200}
             className="object-contain"
+            priority={true}
           />
         </Link>
 
