@@ -78,8 +78,8 @@ export default function Home() {
       <GlobalImpact globalData={globalData} />
       <LeadingSection leadingData={leadingData} />
       <ImpactPillarsSection impactPillarsData={impactPillarsData} />
-      <SocialResponsibility socialResponsibilitiesData={socialResponsibilitiesData} />
       <News newsData={newsData} />
+      <SocialResponsibility socialResponsibilitiesData={socialResponsibilitiesData} />
       <CategoriesSection />
       <PartnersSection partnersData={partnersData} />
     </>
