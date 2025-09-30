@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import axios from "axios";
 import { END_POINTS } from "@utils/APIs";
 
@@ -18,24 +18,19 @@ import ImpactPillarsSection from "@components/sections/home/impactPillars";
 
 const fetchedData = async (locale) => {
   try {
-    console.log("Fetching data from:", `${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`);
     const response = await axios.get(`${END_POINTS.MAIN}/${END_POINTS.HOME}?lang=${locale}`, {
       headers: {
         Authorization: "5rkYT26RQeYJC2vd4PPS",
       },
     });
-    console.log("API Response success:", response.data);
     return response.data.data;
   } catch (error) {
-    console.error("API Error:", error.message);
     throw error;
   }
 };
 
 export default function Home() {
-  const t = useTranslations('common');
   const locale = useLocale();
-  console.log(locale);
   
   const { data, error, isLoading, isFetching } = useQuery({
     queryKey: ["fetchedData", locale],

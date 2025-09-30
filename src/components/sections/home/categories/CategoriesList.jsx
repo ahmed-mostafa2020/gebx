@@ -1,5 +1,4 @@
 "use client";
-import { StaticImageData } from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 

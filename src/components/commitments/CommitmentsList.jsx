@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useState } from "react";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -33,7 +33,21 @@ const CommitmentsList = ({ commitmentsList }) => {
         className={`transition-transform duration-500 ease-in-out mx-[-20px] ${
           isActive
             ? "scale-125 z-3"
-            );
+            : isBefore || isAfter
+            ? "scale-100 z-2"
+            : "scale-75 z-1 opacity-50"
+        }`}
+        onClick={() => setActiveIndex(index)}
+      >
+        <Image
+          src={commitment.image}
+          alt={commitment.title}
+          width={200}
+          height={200}
+          className="rounded-lg cursor-pointer"
+        />
+      </div>
+    );
   });
 
   return (

@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import CategoriesList from "./CategoriesList";
 
 import categoryImage1 from "@assets/category1.png";

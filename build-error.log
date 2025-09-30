@@ -1,0 +1,85 @@
+﻿yarn run v1.22.22
+$ next build
+  Γû▓ Next.js 14.2.15
+  - Environments: .env.local
+  - Experiments (use with caution):
+    ┬╖ esmExternals
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+node.exe : 
+At C:\Users\ahmos\AppData\Roa
+ming\npm\yarn.ps1:24 char:5
++     & "node$exe"  "$basedir
+/node_modules/yarn/bin/yarn.j
+s" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (:String  
+  ) [], RemoteException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Failed to compile.
+
+./src/app/[locale]/page.js
+33:9  Error: 't' is assigned 
+a value but never used.  @typ
+escript-eslint/no-unused-vars
+
+./src/components/commitments/
+CommitmentsList.jsx
+36:12  Error: Parsing error: 
+':' expected.
+
+./src/components/common/Langu
+ageSwitcher.jsx
+5:10  Error: 'useLocale' is 
+defined but never used.  @typ
+escript-eslint/no-unused-vars
+
+./src/components/sections/Com
+mitmentsSection.jsx
+35:11  Error: 'isBefore' is 
+assigned a value but never 
+used.  @typescript-eslint/no-
+unused-vars
+38:11  Error: 'isAfter' is 
+assigned a value but never 
+used.  @typescript-eslint/no-
+unused-vars
+
+./src/components/sections/hom
+e/categories/CategoriesList.j
+sx
+2:10  Error: 
+'StaticImageData' is defined 
+but never used.  @typescript-
+eslint/no-unused-vars
+
+./src/components/sections/hom
+e/categories/CategoriesSectio
+n.jsx
+1:10  Error: 
+'StaticImageData' is defined 
+but never used.  @typescript-
+eslint/no-unused-vars
+
+./src/components/sections/hom
+e/categories/Category.jsx
+3:17  Error: 
+'StaticImageData' is defined 
+but never used.  @typescript-
+eslint/no-unused-vars
+
+info  - Need to disable some 
+ESLint rules? Learn more 
+here: https://nextjs.org/docs
+/basic-features/eslint#disabl
+ing-rules
+error Command failed with 
+exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

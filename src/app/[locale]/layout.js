@@ -13,18 +13,18 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const { locale } = params;
   return {
     title: locale === 'ar' ? 'جيب إكس | الرئيسية' : 'GebX | Home',
     description: locale === 'ar' ? 'جيب إكس لحلول التكنولوجيا' : 'GebX for technology solutions',
   };
 }
 
-export default async function LocaleLayout({ children, params: { locale } }) {
+export default async function LocaleLayout({ children, params }) {
+  const { locale } = params;
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale)) notFound();
-
-  console.log(`Layout rendering for locale: ${locale}`);
 
   // Providing all messages to the client side
   const messages = await getMessages({ locale });
