@@ -24,13 +24,15 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale)) notFound();
 
+  console.log(`Layout rendering for locale: ${locale}`);
+
   // Providing all messages to the client side
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className="text-white">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <QueryProvider>
             <Header />
             {children}

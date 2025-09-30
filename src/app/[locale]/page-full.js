@@ -34,6 +34,7 @@ const fetchedData = async (locale) => {
 
 export default function Home() {
   const locale = useLocale();
+  console.log(locale);
   
   const { data, error, isLoading, isFetching } = useQuery({
     queryKey: ["fetchedData", locale],
